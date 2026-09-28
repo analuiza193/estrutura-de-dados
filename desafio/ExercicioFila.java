@@ -14,6 +14,7 @@ public class ExercicioFila {
         fila.add(40);
 
         System.out.println("Fila original: " + fila);
+        
         Stack<Integer> pilha = new Stack<>();
 
         while (!fila.isEmpty()) {

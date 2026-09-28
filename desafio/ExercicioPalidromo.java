@@ -17,6 +17,7 @@ public class ExercicioPalidromo {
         }
         
         String invertida = "";
+        
         while (!pilha.isEmpty()) {
             invertida += pilha.pop();
         }

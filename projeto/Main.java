@@ -6,7 +6,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ListarPacientes lista = new ListarPacientes();
-
         int opcao;
 
         do {
@@ -29,12 +28,10 @@ public class Main {
                 sc.nextLine();
                 System.out.print("Escolha uma opção: ");
             }
-
             opcao = sc.nextInt();
             sc.nextLine();
 
             switch (opcao) {
-
                 case 1:
                     lista.inserirInicio(cadastrarPaciente(sc));
                     System.out.println("Paciente cadastrado no início!");
@@ -109,13 +106,10 @@ public class Main {
                 default:
                     System.out.println("Opção inválida.");
             }
-
         } while (opcao != 0);
-
         sc.close();
     }
 
-    // Cadastra os dados de um paciente
     public static Paciente cadastrarPaciente(Scanner sc) {
         System.out.println("\n--- Dados do paciente ---");
 
@@ -137,19 +131,16 @@ public class Main {
         return new Paciente(nome, cpf, idade, telefone, prontuario);
     }
 
-    // Lê um número inteiro
     public static int lerInteiro(Scanner sc) {
         while (!sc.hasNextInt()) {
             System.out.println("Digite um número inteiro válido.");
             sc.nextLine();
         }
-
         int numero = sc.nextInt();
         sc.nextLine();
         return numero;
     }
 
-    // Exibe o paciente removido
     public static void exibirRemovido(Paciente p) {
         if (p != null) {
             System.out.println("Paciente removido:");
@@ -159,7 +150,6 @@ public class Main {
         }
     }
 
-    // Exibe o resultado da pesquisa
     public static void exibirPesquisa(Paciente p) {
         if (p != null) {
             System.out.println("Paciente encontrado:");
